@@ -100,7 +100,8 @@ window.onload = function() {
 	
 	var lines3 = []
 	for (var i = 0; i < lines2.length; i++) {
-	  lines3.push(LatLng(lines2[i].num1,lines2[i].num2))
+          var hoge = LatLng(lines2[i].num1,lines2[i].num2)
+	  lines3.push(hoge)
 	}
 	
 	console.log(lines3)
