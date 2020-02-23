@@ -42,13 +42,10 @@ function loadCSV(targetFile) {
 	    shape_pt_lon:wordSet[2],
 	    shape_pt_sequence:wordSet[3],
 	};
-	
-	var num1 = Number(wordSet[1]);    
-	var num2 = Number(wordSet[2]);    
 	    
 	var wordData2 = {
-	  num1,
-	  num2,
+	    shape_pt_lat:wordSet[1],
+	    shape_pt_lon:wordSet[2],
 	};
  
         allData.push(wordData);
@@ -81,17 +78,17 @@ window.onload = function() {
 	console.log(lines)
 	var lines2 = lines.slice(1,lines.length)
 	console.log(lines2)
-	console.log(lines2[0].num1)
-	console.log(lines2[0].num2)
+	console.log(lines2[0].shape_pt_lat)
+	console.log(lines2[0].shape_pt_lon)
 	
 	var lines3 = []
 	for (var i = 0; i < lines2.length; i++) {
-          var hoge = google.maps.LatLng(lines2[i].num1,lines2[i].num2)
+          var hoge = [lines2[i].shape_pt_lat,lines2[i].shape_pt_lon]
 	  lines3.push(hoge)
 	}
 	
 	console.log(lines3)
-	var triangle2 = L.polyline(lines3).addTo(map)
+// 	var triangle2 = L.polyline(lines3).addTo(map)
 	
 	//map.on('click',(e) => alert(e.latlng)) //クリックで座標表示
 	
