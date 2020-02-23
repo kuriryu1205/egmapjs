@@ -88,9 +88,10 @@ window.onload = function() {
 	
 	var marker = L.marker([26.330451,127.795982]).addTo(map)
 	
-	var triangle2 = L.polyline(
-         loadCSV("shapes/shapes.csv")
-	).addTo(map);
+	console.log(loadCSV("shapes/shapes.csv"))
+// 	var triangle2 = L.polyline(
+//          loadCSV("shapes/shapes.csv")
+// 	).addTo(map);
 	
 	//map.on('click',(e) => alert(e.latlng)) //クリックで座標表示
 	
