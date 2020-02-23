@@ -43,10 +43,7 @@ function loadCSV(targetFile) {
 	    shape_pt_sequence:wordSet[3],
 	};
 	    
-	var wordData2 = {
-	    lat:Number(wordSet[1]),
-	    lng:Number(wordSet[2]),
-	};
+	var wordData2 = [Number(wordSet[1]),Number(wordSet[2])];
  
         allData.push(wordData);
         allLine.push(wordData2);
