@@ -131,7 +131,9 @@ window.onload = function() {
     	}).addTo(map)
 	
 	//map.on('click',(e) => alert(e.latlng)) //クリックで座標表示
-  	console.log(loadJSON("json/buslist.json"));
+	var json = loadJSON("json/buslist.json")
+  	console.log(json);
+	console.log(json[4]);
 	
 	// SPARQLクエリー
 	var query = `
