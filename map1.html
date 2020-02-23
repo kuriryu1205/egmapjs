@@ -86,8 +86,11 @@ window.onload = function() {
           var hoge = L.geoJson([lines2[i].shape_pt_lat,lines2[i].shape_pt_lon])
 	  lines3.push(hoge)
 	}
+	var lines4 = L.geoJson(lines2)
 	
 	console.log(lines3)
+	console.log(lines4)
+	
 	var triangle2 = L.polyline(lines3).addTo(map)
 	
 	//map.on('click',(e) => alert(e.latlng)) //クリックで座標表示
