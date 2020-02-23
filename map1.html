@@ -14,6 +14,18 @@
 	
 <script>"use strict"
 	
+function loadJSON(targetFile){
+	var request = new XMLHttpRequest();
+	request.open('GET', targetFile);
+	request.responseType = 'json';
+	request.send();
+	
+	request.onload = function() {
+ 	var superHeroes = request.response;
+  	console.log(superHeroes);
+	}
+}
+	
 function loadCSV(targetFile) {
  
     // 読み込んだデータを1行ずつ格納する配列
@@ -119,6 +131,8 @@ window.onload = function() {
     	}).addTo(map)
 	
 	//map.on('click',(e) => alert(e.latlng)) //クリックで座標表示
+	
+	loadJSON("json/buslist.json")
 	
 	// SPARQLクエリー
 	var query = `
