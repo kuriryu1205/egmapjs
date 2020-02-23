@@ -83,8 +83,10 @@ window.onload = function() {
 	console.log(lines3)
 	console.log(lines3[0])
 	
-	lines3.unshift([26.33676, 127.800403])
-	lines3.unshift([26.33676, 127.800403])
+	var lines4 = []
+	lines4.unshift([26.337617,127.806564])
+	lines4.unshift([26.33676, 127.800403])
+	lines4.unshift([26.333218,127.798748])
 	
 	console.log(lines3)
 	console.log(lines3[0])
@@ -102,7 +104,8 @@ window.onload = function() {
 // 	console.log(lines3)
 // 	console.log(lines4)
 	
- 	var triangle2 = L.polyline(lines3).addTo(map)
+ 	var triangle2 = L.polyline(lines4).addTo(map)
+// 	var triangle2 = L.polyline(lines3).addTo(map)
 	
 	//map.on('click',(e) => alert(e.latlng)) //クリックで座標表示
 	
