@@ -44,8 +44,8 @@ function loadCSV(targetFile) {
 	};
 	    
 	var wordData2 = {
-	    shape_pt_lat:wordSet[1],
-	    shape_pt_lon:wordSet[2],
+	    lat:wordSet[1],
+	    lng:wordSet[2],
 	};
  
         allData.push(wordData);
@@ -89,6 +89,11 @@ window.onload = function() {
 	lines4.unshift([26.333218,127.798748])
 	console.log(lines4)	
 	
+	var latLngLiteral = {
+	lat: 35.71 ,
+	lng: 139.8107 ,
+	} ;
+	
 	var lines5 = [[]]
 	for (var i = 0; i < lines2.length; i++) {
 		lines5[0].push([lines2[i].shape_pt_lat,lines2[i].shape_pt_lon])
@@ -108,7 +113,7 @@ window.onload = function() {
 // 	console.log(lines4)
 	
  	var triangle2 = L.polyline(lines4).addTo(map)
-	var triangle3 = L.polyline(lines5).addTo(map)
+	var triangle3 = L.polyline(lines2).addTo(map)
 	
 // 	var triangle2 = L.polyline(lines3).addTo(map)
 	
