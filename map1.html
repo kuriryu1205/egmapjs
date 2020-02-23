@@ -75,11 +75,10 @@ window.onload = function() {
 	var marker = L.marker([26.330451,127.795982]).addTo(map)
 	
 	var lines = loadCSV("shapes/shapes.csv")
-	console.log(lines)
 	var lines2 = lines.slice(1,lines.length)
 	console.log(lines2)
-	console.log(lines2[0].shape_pt_lat)
-	console.log(lines2[0].shape_pt_lon)
+// 	console.log(lines2[0].shape_pt_lat)
+// 	console.log(lines2[0].shape_pt_lon)
 	
 	var lines3 = []
 	for (var i = 0; i < lines2.length; i++) {
