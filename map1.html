@@ -49,8 +49,8 @@ function loadCSV(targetFile) {
         allLine.push(wordData2);
     }
  
-    console.log(allData);
-    console.log(allLine);
+//     console.log(allData);
+//     console.log(allLine);
 	
     return(allLine);
 }
@@ -72,6 +72,7 @@ window.onload = function() {
 	var marker = L.marker([26.330451,127.795982]).addTo(map)
 	
 	var lines = loadCSV("shapes/shapes.csv")
+// 	console.log(lines)
 	var lines2 = lines.slice(1,lines.length)
 	console.log(lines2)
 	console.log(lines2[0])
