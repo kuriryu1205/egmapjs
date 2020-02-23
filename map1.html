@@ -62,7 +62,7 @@ function loadCSV(targetFile) {
 	for (var i = 0; i < lines2.length-1; i++) {
 	 lines3.push(lines2[i])
 	}
-	var triangle3 = L.polyline(lines3).addTo(map)
+	return(lines3)
 	}
 	
 	
@@ -82,13 +82,13 @@ window.onload = function() {
 	
 	var marker = L.marker([26.330451,127.795982]).addTo(map)
 
-	writeLoad("shapes/shapes.csv")
-	writeLoad("shapes/shapes2.csv")
-	writeLoad("shapes/shapes3.csv")
-	writeLoad("shapes/shapes4.csv")
-	writeLoad("shapes/shapes5.csv")
-	writeLoad("shapes/shapes6.csv")
-	writeLoad("shapes/shapes7.csv")
+	L.polyline(writeLoad("shapes/shapes.csv")).addTo(map)
+	L.polyline(writeLoad("shapes/shapes2.csv")).addTo(map)
+	L.polyline(writeLoad("shapes/shapes3.csv")).addTo(map)
+	L.polyline(writeLoad("shapes/shapes4.csv")).addTo(map)
+	L.polyline(writeLoad("shapes/shapes5.csv")).addTo(map)
+	L.polyline(writeLoad("shapes/shapes6.csv")).addTo(map)
+	L.polyline(writeLoad("shapes/shapes7.csv")).addTo(map)
 	
 	//map.on('click',(e) => alert(e.latlng)) //クリックで座標表示
 	
