@@ -77,6 +77,7 @@ window.onload = function() {
 	var lines = loadCSV("shapes/shapes.csv")
 	var lines2 = lines.slice(1,lines.length)
 	console.log(lines2)
+	console.log(lines2[0])
 	
 	var lines3 = JSON.stringify(lines2)
 	console.log(lines3)
@@ -94,7 +95,7 @@ window.onload = function() {
 // 	console.log(lines3)
 // 	console.log(lines4)
 	
-	var triangle2 = L.polyline(lines2).addTo(map)
+// 	var triangle2 = L.polyline(lines2).addTo(map)
 	
 	//map.on('click',(e) => alert(e.latlng)) //クリックで座標表示
 	
