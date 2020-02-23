@@ -27,6 +27,50 @@
   </script>
 	
 <script>"use strict"
+	
+function loadCSV(targetFile) {
+ 
+    // 読み込んだデータを1行ずつ格納する配列
+    var allData = [];
+    var allLine = [];
+ 
+    // XMLHttpRequestの用意
+    var request = new XMLHttpRequest();
+    request.open("get", targetFile, false);
+    request.send(null);
+ 
+    // 読み込んだCSVデータ
+    var csvData = request.responseText;
+ 
+    // CSVの全行を取得
+    var lines = csvData.split("\n");
+ 
+    for (var i = 0; i < lines.length; i++) {
+        // 1行ごとの処理
+ 
+        var wordSet = lines[i].split(",");
+ 
+        var wordData = {
+	    shape_id:wordSet[0],
+	    shape_pt_lat:wordSet[1],
+	    shape_pt_lon:wordSet[2],
+	    shape_pt_sequence:wordSet[3],
+	};
+	
+	var wordData2 = {
+	  shape_pt_lat:wordSet[1],
+	  shape_pt_lon:wordSet[2],
+	};
+ 
+        allData.push(wordData);
+        allLine.push(wordData2);
+    }
+ 
+    console.log(allData);
+    console.log(allLine);
+}
+ 
+loadCSV("shapes/shapes.csv");
 
 window.onload = function() {
 	var map = initMap('mapid')
@@ -74,6 +118,17 @@ window.onload = function() {
     	[26.337617,127.806564],
  	]).addTo(map);
 	
+// 	for (var i = 0; i < lines.length; i++) {
+//         // 1行ごとの処理
+  
+//         var wordData = {
+// 	    shape_id:wordSet[0],
+// 	    shape_pt_lat:wordSet[1],
+// 	    shape_pt_lon:wordSet[2],
+// 	    shape_pt_sequence:wordSet[3],
+// 	};
+//         }
+	
 	var quadrangle = L.polygon([
 	[35.7135, 139.8128],
       	[35.7125, 139.811],
@@ -120,41 +175,7 @@ function csvToArray(path) {
 	
 }
 	 
-function loadCSV(targetFile) {
- 
-    // 読み込んだデータを1行ずつ格納する配列
-    var allData = [];
- 
-    // XMLHttpRequestの用意
-    var request = new XMLHttpRequest();
-    request.open("get", targetFile, false);
-    request.send(null);
- 
-    // 読み込んだCSVデータ
-    var csvData = request.responseText;
- 
-    // CSVの全行を取得
-    var lines = csvData.split("\n");
- 
-    for (var i = 0; i < lines.length; i++) {
-        // 1行ごとの処理
- 
-        var wordSet = lines[i].split(",");
- 
-        var wordData = {
-	    shape_id:wordSet[0],
-	    shape_pt_lat:wordSet[1],
-	    shape_pt_lon:wordSet[2],
-	    shape_pt_sequence:wordSet[3],
-	};
- 
-        allData.push(wordData);
-    }
- 
-    console.log(allData);
-}
- 
-loadCSV("shapes/shapes.csv");
+
 
 </script>
 <style>
