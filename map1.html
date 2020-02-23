@@ -145,27 +145,27 @@ window.onload = function() {
 	var json = loadJSON("json/buslist.json")
   	console.log(json)
 	
-	// SPARQLクエリー
-	var query = `
-		prefix ic: <http://imi.go.jp/ns/core/rdf#>
-		prefix xsd: <http://www.w3.org/2001/XMLSchema#>
-		select ?uri ?name ?lat ?lng {
-			?uri ic:名称 [ ic:表記 ?name ].
-			?uri ic:地理座標 [ ic:緯度 ?lat; ic:経度 ?lng; ].
-			filter(contains(str(?name),'那覇'))
-		} limit 100
-	`
+// 	// SPARQLクエリー
+// 	var query = `
+// 		prefix ic: <http://imi.go.jp/ns/core/rdf#>
+// 		prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+// 		select ?uri ?name ?lat ?lng {
+// 			?uri ic:名称 [ ic:表記 ?name ].
+// 			?uri ic:地理座標 [ ic:緯度 ?lat; ic:経度 ?lng; ].
+// 			filter(contains(str(?name),'那覇'))
+// 		} limit 100
+// 	`
 
-	querySPARQL(query, function(data) {
-		var items = data.results.bindings
-		for (var i = 0; i < items.length; i++) {
-			var item = items[i]
-			var lat = item.lat.value
-			var lng = item.lng.value
-			var name = item.name.value
-			map.addIcon(lat, lng, name)
-		}
-	})
+// 	querySPARQL(query, function(data) {
+// 		var items = data.results.bindings
+// 		for (var i = 0; i < items.length; i++) {
+// 			var item = items[i]
+// 			var lat = item.lat.value
+// 			var lng = item.lng.value
+// 			var name = item.name.value
+// 			map.addIcon(lat, lng, name)
+// 		}
+// 	})
 	
 // 	for (var i = 0; i < lines.length; i++) {
 //         // 1行ごとの処理
@@ -178,18 +178,18 @@ window.onload = function() {
 // 	};
 //         }
 	
-	var quadrangle = L.polygon([
-	[35.7135, 139.8128],
-      	[35.7125, 139.811],
-      	[35.7112, 139.812],
-      	[35.7124, 139.8143]
-    	],
-    	{
-      	color: 'green',
-      	fillColor: '#25dc25',
-      	fillOpacity: 0.5,
-    	}
-	).addTo(map);
+// 	var quadrangle = L.polygon([
+// 	[35.7135, 139.8128],
+//       	[35.7125, 139.811],
+//       	[35.7112, 139.812],
+//       	[35.7124, 139.8143]
+//     	],
+//     	{
+//       	color: 'green',
+//       	fillColor: '#25dc25',
+//       	fillOpacity: 0.5,
+//     	}
+// 	).addTo(map);
 	
 	// CSVファイル読み込み
 function csvToArray(path) {
