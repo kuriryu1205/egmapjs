@@ -80,17 +80,16 @@ window.onload = function() {
 // 	console.log(lines2[0].shape_pt_lat)
 // 	console.log(lines2[0].shape_pt_lon)
 	
-	var lines3 = []
-	for (var i = 0; i < lines2.length; i++) {
-          var hoge = L.geoJson([lines2[i].shape_pt_lat,lines2[i].shape_pt_lon])
-	  lines3.push(hoge)
-	}
-	var lines4 = L.geoJson(lines2)
+// 	var lines3 = []
+// 	for (var i = 0; i < lines2.length; i++) {
+//           var hoge = L.geoJson([lines2[i].shape_pt_lat,lines2[i].shape_pt_lon])
+// 	  lines3.push(hoge)
+// 	}
 	
-	console.log(lines3)
-	console.log(lines4)
+// 	console.log(lines3)
+// 	console.log(lines4)
 	
-	var triangle2 = L.polyline(lines3).addTo(map)
+// 	var triangle2 = L.polyline(lines3).addTo(map)
 	
 	//map.on('click',(e) => alert(e.latlng)) //クリックで座標表示
 	
