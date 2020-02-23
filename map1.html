@@ -83,7 +83,7 @@ window.onload = function() {
 	
 	var lines3 = []
 	for (var i = 0; i < lines2.length; i++) {
-          var hoge = [lines2[i].shape_pt_lat,lines2[i].shape_pt_lon]
+          var hoge = L.geoJson([lines2[i].shape_pt_lat,lines2[i].shape_pt_lon])
 	  lines3.push(hoge)
 	}
 	
