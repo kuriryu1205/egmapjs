@@ -81,9 +81,10 @@ window.onload = function() {
 	console.log(lines3)
 	console.log(lines3[0])
 	
-	var lines5 = [[26.337617,127.806564]]
+	var lines5 = []
+	lines5.push([26.337617,127.806564])
 	for (var i = 0; i < lines2.length; i++) {
-	 lines5.unshift(lines2[i])
+	 lines5.push(lines2[i])
 	}
 	console.log(lines5)	
 	
