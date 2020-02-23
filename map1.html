@@ -142,9 +142,11 @@ function loadCSV(targetFile) {
         var wordSet = lines[i].split(",");
  
         var wordData = {
-            name: wordSet[0],
-            age: wordSet[1],
-        };
+	    shape_id:wordSet[0],
+	    shape_pt_lat:wordSet[1],
+	    shape_pt_lon:wordSet[2],
+	    shape_pt_sequence:wordSet[3],
+	};
  
         allData.push(wordData);
     }
