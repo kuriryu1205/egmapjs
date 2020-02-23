@@ -88,6 +88,10 @@ window.onload = function() {
 	
 	var marker = L.marker([26.330451,127.795982]).addTo(map)
 	
+	var triangle2 = L.polyline(
+    	allLine
+	).addTo(map);
+	
 	//map.on('click',(e) => alert(e.latlng)) //クリックで座標表示
 	
 	// SPARQLクエリー
