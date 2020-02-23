@@ -97,6 +97,14 @@ window.onload = function() {
 	console.log(lines2)
 	console.log(lines2[0].num1)
 	console.log(lines2[0].num2)
+	
+	var lines3 = []
+	for (var i = 0; i < lines.length; i++) {
+	  lines3.push(lines2[i].num1,lines2[i].num2)
+	}
+	
+	console.log(lines3)
+	
 //  	var triangle2 = L.polyline(lines2).addTo(map)
 	
 	//map.on('click',(e) => alert(e.latlng)) //クリックで座標表示
