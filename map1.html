@@ -21,8 +21,8 @@ function loadJSON(targetFile){
 	request.send();
 	
 	request.onload = function() {
- 	var superHeroes = request.response;
-  	console.log(superHeroes);
+ 	var json = request.response;
+	return(json)
 	}
 }
 	
@@ -131,8 +131,7 @@ window.onload = function() {
     	}).addTo(map)
 	
 	//map.on('click',(e) => alert(e.latlng)) //クリックで座標表示
-	
-	loadJSON("json/buslist.json")
+  	console.log(loadJSON("json/buslist.json"));
 	
 	// SPARQLクエリー
 	var query = `
