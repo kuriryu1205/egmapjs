@@ -25,7 +25,9 @@ function loadJSON(targetFile){
 	console.log(json);
 	console.log(json[0]);
 	console.log(json[0].name);
-	busicon(S2903,json[2].lat,json[2].lng,json[2].name)
+	for (var i = 0; i < 18; i++) {
+	busicon("S2903",json[i].lat,json[i].lng,json[i].name)
+	}
 	}
 	
 }
