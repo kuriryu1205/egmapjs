@@ -55,6 +55,17 @@ function loadCSV(targetFile) {
     return(allLine);
 }
  
+	function writeLoad(csv){
+	var lines = loadCSV(csv)
+	var lines2 = lines.slice(1,lines.length)
+	var lines3 = []
+	for (var i = 0; i < lines2.length-1; i++) {
+	 lines5.push(lines2[i])
+	}
+	var triangle3 = L.polyline(lines3).addTo(map)
+	}
+	
+	
 window.onload = function() {
 	var map = initMap('mapid')
 	map.setZoom(16)
@@ -70,32 +81,8 @@ window.onload = function() {
 	map.addIcon(26.337617,127.806564,"嘉間良","icon/bus_stand.png",64) // 嘉間良
 	
 	var marker = L.marker([26.330451,127.795982]).addTo(map)
-	
-	var lines = loadCSV("shapes/shapes.csv")
-// 	console.log(lines)
-	var lines2 = lines.slice(1,lines.length)
-	console.log(lines2)
-	console.log(lines2[0])
-	
-	var lines3 = [[lines2]]
-	console.log(lines3)
-	console.log(lines3[0])
-	
-	var lines5 = []
-	for (var i = 0; i < lines2.length-1; i++) {
-	 lines5.push(lines2[i])
-	}
-	console.log(lines5)	
-	
-	var lines4 = []
-	lines4.unshift([26.337617,127.806564])
-	lines4.unshift([26.33676, 127.800403])
-	lines4.unshift([26.333218,127.798748])
-	lines4.unshift(lines2[0])
-	console.log(lines4)	
 
- 	var triangle2 = L.polyline(lines4).addTo(map)
-	var triangle3 = L.polyline(lines5).addTo(map)
+	writeLoad("shapes/shapes.csv")
 	
 	//map.on('click',(e) => alert(e.latlng)) //クリックで座標表示
 	
