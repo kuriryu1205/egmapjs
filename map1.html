@@ -72,6 +72,19 @@ window.onload = function() {
     	[35.7143, 139.8121],
  	]).addTo(map);
 	
+	var quadrangle = L.polygon([
+	[35.7135, 139.8128],
+      	[35.7125, 139.811],
+      	[35.7112, 139.812],
+      	[35.7124, 139.8143]
+    	],
+    	{
+      	color: 'green',
+      	fillColor: '#25dc25',
+      	fillOpacity: 0.5,
+    	}
+	).addTo(map);
+	
 	for (let step = 0; step < 5; step++) {
         // 値が 0 から 4 まで計 5 回実行される
         console.log('一歩西に歩く');
