@@ -20,11 +20,11 @@ function loadJSON(targetFile){
 	request.responseType = 'json';
 	request.send();
 	
-	var json;
 	request.onload = function() {
- 	json = request.response;
+ 	var json = request.response;
+	return(json);
 	}
-	return(json)
+	
 }
 	
 function loadCSV(targetFile) {
