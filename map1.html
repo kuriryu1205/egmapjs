@@ -87,6 +87,7 @@ window.onload = function() {
 	lines4.unshift([26.337617,127.806564])
 	lines4.unshift([26.33676, 127.800403])
 	lines4.unshift([26.333218,127.798748])
+	lines4.unshift(lines2[0])
 	console.log(lines4)	
 	
 	var latLngLiteral = {
@@ -113,7 +114,7 @@ window.onload = function() {
 // 	console.log(lines4)
 	
  	var triangle2 = L.polyline(lines4).addTo(map)
-	var triangle3 = L.polyline(lines2).addTo(map)
+// 	var triangle3 = L.polyline(lines2).addTo(map)
 	
 // 	var triangle2 = L.polyline(lines3).addTo(map)
 	
