@@ -20,10 +20,11 @@ function loadJSON(targetFile){
 	request.responseType = 'json';
 	request.send();
 	
+	var json;
 	request.onload = function() {
- 	var json = request.response;
-	return(json)
+ 	json = request.response;
 	}
+	return(json)
 }
 	
 function loadCSV(targetFile) {
@@ -133,7 +134,7 @@ window.onload = function() {
 	//map.on('click',(e) => alert(e.latlng)) //クリックで座標表示
 	var json = loadJSON("json/buslist.json")
   	console.log(json);
-	console.log(json[4]);
+	console.log(json.4);
 	
 	// SPARQLクエリー
 	var query = `
