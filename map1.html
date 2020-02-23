@@ -77,7 +77,8 @@ window.onload = function() {
 	var lines = loadCSV("shapes/shapes.csv")
 	var lines2 = lines.slice(1,lines.length)
 	console.log(lines2)
-	console.log(JSON.parse(lines2))
+	console.log(JSON.stringify(lines2))
+	
 // 	console.log(lines2[0].shape_pt_lat)
 // 	console.log(lines2[0].shape_pt_lon)
 	
