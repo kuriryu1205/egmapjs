@@ -26,9 +26,9 @@ function loadJSON(targetFile){
 	return(json);
 	}
 	
-	var json = request.response;
-	console.log(json);
-	return(json);
+	var json2 = request.request.responseText;
+	console.log(json2);
+	return(json2);
 }
 	
 function loadCSV(targetFile) {
