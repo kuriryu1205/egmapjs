@@ -82,7 +82,11 @@ window.onload = function() {
 	
 	var marker = L.marker([26.330451,127.795982]).addTo(map)
 
-	L.polyline(writeLoad("shapes/shapes.csv")).addTo(map)
+	L.polyline(writeLoad("shapes/shapes.csv"){
+      	color: 'green',
+      	fillColor: '#25dc25',
+      	fillOpacity: 0.5,
+    	}).addTo(map)
 	L.polyline(writeLoad("shapes/shapes_2.csv")).addTo(map)
 	L.polyline(writeLoad("shapes/shapes_3.csv")).addTo(map)
 	L.polyline(writeLoad("shapes/shapes_4.csv")).addTo(map)
