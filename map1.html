@@ -20,11 +20,11 @@ function loadJSON(targetFile){
 	request.responseType = 'json';
 	request.send();
 	
-// 	request.onload = function() {
-//  	var json = request.response;
-// 	console.log(json);
-// 	return(json);
-// 	}
+	request.onload = function() {
+ 	var json = request.response;
+	console.log(json);
+	return(json);
+	}
 	
 	var json = request.response;
 	console.log(json);
@@ -138,8 +138,8 @@ window.onload = function() {
 	//map.on('click',(e) => alert(e.latlng)) //クリックで座標表示
 	var json = loadJSON("json/buslist.json")
   	console.log(json)
-	console.log(json[4])
-	console.log(json[4].name)
+// 	console.log(json[4])
+// 	console.log(json[4].name)
 	
 	// SPARQLクエリー
 	var query = `
