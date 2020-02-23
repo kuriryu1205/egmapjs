@@ -26,7 +26,7 @@ function loadJSON(targetFile){
 	console.log(json[0]);
 	console.log(json[0].name);
 	var map = initMap('mapid')
-	console(map)
+	console.jog(map)
 	busicon(map,json[2].lat,json[2].lng,json[2].name)
 	}
 	
@@ -90,7 +90,7 @@ function busicon(map,lat,lng,name){
 	
 window.onload = function() {
 	var map = initMap('mapid')
-	console(map)
+	console.jog(map)
 	map.setZoom(16)
 	//map.panTo([ 35.943560,136.188917 ]) // 鯖江駅
 	//map.panTo([ 26.2123,127.6791 ]) // 那覇市
